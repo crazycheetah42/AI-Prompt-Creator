@@ -6,10 +6,10 @@ root = tk.Tk()
 root.wm_title("AI Prompt Creator")
 root.geometry("1024x768")
 
-header = ttk.Label(root, text="AI Prompt Creator", font=("Helvetica", 16))
+header = tk.Label(root, text="AI Prompt Creator", font=("Helvetica", 16))
 header.pack()
 
-hint_lbl = ttk.Label(root, text="Generate prompts for:")
+hint_lbl = tk.Label(root, text="Generate prompts for:")
 hint_lbl.pack()
 
 var = tk.StringVar()
@@ -26,13 +26,13 @@ def generate_prompts():
     response_widget.delete(1.0, tk.END)
     response_widget.insert(1.0, response_text)
 
-submit_btn = ttk.Button(root, text="Generate", command=generate_prompts)
+submit_btn = tk.Button(root, text="Generate", command=generate_prompts)
 submit_btn.pack()
 
 response_widget = tk.Text(root)
 response_widget.pack()
 
-info_lbl = ttk.Label(root, text="Note: This is not an AI tool. It simply generates prompts to be used with AI.")
+info_lbl = tk.Label(root, text="Note: This is not an AI tool. It simply generates prompts to be used with AI.")
 info_lbl.pack(side="bottom")
 
 root.mainloop()
